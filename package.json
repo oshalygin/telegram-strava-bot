@@ -1,6 +1,6 @@
 {
   "name": "telegram-strava-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a Telegram Strava Bot running in GCP",
   "author": "Oleg Shalygin <oshalygin@gmail.com>",
   "main": "index.js",

@@ -1,0 +1,25 @@
+sudo: required
+
+branches:
+  only:
+    - master
+
+language: node_js
+node_js:
+  - 8.2.1
+
+before_install:
+  # TODO:  Add Decryption step for Telegram Keys
+  
+install:
+  - npm install
+
+script:
+  - npm run lint
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      git config credential.helper "store --file=.git/credentials";
+      echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials;
+      bash ./.travis.d/tag-version.sh;
+    fi
