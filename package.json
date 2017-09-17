@@ -2,7 +2,7 @@
   "name": "telegram-strava-bot",
   "version": "0.0.1",
   "description": "This is a Telegram Strava Bot running in GCP",
-  "author": "oshalygin@gmail.com",
+  "author": "Oleg Shalygin <oshalygin@gmail.com>",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -34,7 +34,11 @@
     "babel-register": "6.24.1",
     "babel-runtime": "6.23.0",
     "eslint": "3.19.0",
+    "eslint-config-prettier": "2.3.0",
+    "eslint-plugin-prettier": "2.1.2",
     "eslint-plugin-import": "2.3.0",
+    "jest": "20.0.4",
+    "prettier": "1.5.3",
     "uuid": "3.0.1"
   }
 }
