@@ -23,6 +23,7 @@
     "axios": "0.16.2",
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
+    "babel-jest": "20.0.3",
     "babel-plugin-syntax-trailing-function-commas": "6.22.0",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
@@ -37,9 +38,23 @@
     "eslint": "3.19.0",
     "eslint-config-prettier": "2.3.0",
     "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-jest": "20.0.3",
     "eslint-plugin-prettier": "2.1.2",
     "jest": "20.0.4",
     "prettier": "1.5.3",
     "uuid": "3.0.1"
+  },
+  "jest": {
+    "testRegex": ".*?(\\.spec).js",
+    "transformIgnorePatterns": ["node_modules"],
+    "collectCoverageFrom": ["src/**/*.js"],
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest/build/index.js"
+    },
+    "setupFiles": ["./utilities/testSetup.js"],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/utilities/fileMock.js"
+    },
+    "coverageReporters": ["json", "html", "text", "lcov", "clover"]
   }
 }
